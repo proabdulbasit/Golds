@@ -14,6 +14,7 @@ export default NextAuth({
       credentials: {},
       async authorize(credentials, req) {
         await dbConnect();
+        console.log("api checkup",credentials)
         const { email, password } = credentials;
 
         const user = await User.findOne({ email });
@@ -29,13 +30,17 @@ export default NextAuth({
         if (user.isAdmin !== true) {
           throw new Error("UnAuthorised!");
         }
-
         return user;
       },
     }),
+
   ],
+
   callbacks: {
+    
     jwt: ({ token, user }) => {
+      console.log("user", user)
+      console.log("token", token)
       if (user) {
         token.id = user.id;
         token.isAdmin = user.isAdmin;
