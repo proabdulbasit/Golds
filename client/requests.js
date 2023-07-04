@@ -1,8 +1,8 @@
 import axios from "axios";
 
-let dev = process.env.NODE_ENV !== "production";
-const DEV_BASE_URL = process.env.BASE_URL_DEV;
-const PROD_BASE_URL = process.env.BASE_URL_PROD;
+let dev = "production" !== "production";
+const DEV_BASE_URL = "https://gpchest-new2.vercel.app/";
+const PROD_BASE_URL = "https://gpchest-new2.vercel.app/";
 
 const BASE_URL = dev ? DEV_BASE_URL : PROD_BASE_URL;
 

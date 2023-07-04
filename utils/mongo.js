@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-let dev = process.env.NODE_ENV !== "production";
-let DEV_DB_URL = process.env.MONGODB_URL_DEV;
-let PROD_DB_URL = process.env.MONGODB_URL_PROD;
+let dev = "production" !== "production";
+let DEV_DB_URL = "mongodb+srv://proabdulbasitme:pakistan@cluster0.a4ce26x.mongodb.net/";
+let PROD_DB_URL = "mongodb+srv://proabdulbasitme:pakistan@cluster0.a4ce26x.mongodb.net/";
 
 mongoose.set("strictQuery", true);
 

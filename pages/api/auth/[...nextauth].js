@@ -57,9 +57,9 @@ export default NextAuth({
       return session;
     },
   },
-  secret: process.env.JWT_SECRET,
+  secret: "ybBhuDVIqSZ+nH/50+ibBJs3khnduhgtrJIGFaRHLjMg=",
   jwt: {
-    secret: process.env.JWT_SECRET,
+    secret: "ybBhuDVIqSZ+nH/50+ibBJs3khnduhgtrJIGFaRHLjMg=",
     encryption: true,
   },
   pages: {

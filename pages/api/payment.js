@@ -2,7 +2,7 @@ import paypal from "@paypal/checkout-server-sdk";
 
 export default async function handler(req, res) {
   const Environment =
-    process.env.NODE_ENV === "production"
+    "production" === "production"
       ? paypal.core.LiveEnvironment
       : paypal.core.SandboxEnvironment;
 
