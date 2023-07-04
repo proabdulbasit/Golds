@@ -102,7 +102,7 @@ const ClientLogin = ({
       {error && <p className="error">Invalid Credentials!</p>}
       {success && <p className="success">Welcome!</p>}
       <div className={styles.client__login__head__wrapper}>
-        <h4 className={styles.client__login__head}>Login</h4>
+        <h4 className={styles.client__login__head}>Login Page</h4>
         <svg
           onClick={() => handleLoginClose()}
           className={styles.client__login__close}
